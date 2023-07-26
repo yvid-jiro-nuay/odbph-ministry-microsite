@@ -30,18 +30,18 @@
                 <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="carousel-img" src="https://picsum.photos/800/1200/?blur=5&random=1" alt="rolling-image" width="800" height="1200" >
+                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=1" alt="rolling-image" width="800" height="1200" >
                       </div>
                       <div class="carousel-item">
-                        <img class="carousel-img" src="https://picsum.photos/800/1200/?blur=5&random=2" alt="rolling-image" width="800" height="1200" >
+                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=2" alt="rolling-image" width="800" height="1200" >
                       </div>
                       <div class="carousel-item">
-                        <img class="carousel-img" src="https://picsum.photos/800/1200/?blur=5&random=3" alt="rolling-image" width="800" height="1200" >
+                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=3" alt="rolling-image" width="800" height="1200" >
                       </div>
                     </div>
                 </div>
                 <div id="masthead" class="center-absolute center-flex">
-                    <h1 class="section-header" id="hero-header">Leading Filipinos<br>to the Bible</h1>
+                    <h1 class="section-header" id="hero-header">LEADING FILIPINOS<br>TO THE BIBLE</h1>
                     <p class="section-description">One Story at a Time</p>
                 </div>
                 <div id="cta-wrapper" class="center-absolute center-flex">
@@ -66,41 +66,55 @@
                     <li class="right">
                         <img class="wwd-img" src="https://picsum.photos/600/400?random=1" alt="ministry area illustration" width="300" height="200" >
                         <div class="text-block">
-                            <h3 class="wwd-subhead">This is just a placeholder.</h3>
-                            <p class="wwd-description">Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.</p>
+                            <h3 class="wwd-subhead">Sales Operation</h3>
+                            <p class="wwd-description">"With our desire to lead more Filipinos to the Bible,
+                                we make sure our resources are affordable and
+                                accessible to all."</p>
                         </div>
                     </li>
                     <li class="left">
                         <img class="wwd-img" src="https://picsum.photos/600/400?random=2" alt="ministry area illustration" width="300" height="200">
                         <div class="text-block">
-                            <h3 class="wwd-subhead">This is just a placeholder.</h3>
-                            <p class="wwd-description">Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.</p>
+                            <h3 class="wwd-subhead">Book Displays</h3>
+                            <p class="wwd-description">"By participating in a wide range of events, we are able 
+                                to make our resource displays easily available."</p>
                         </div>
                     </li>
                     <li class="right">
                         <img class="wwd-img" src="https://picsum.photos/600/400?random=3" alt="ministry area illustration" width="300" height="200">
                         <div class="text-block">
-                            <h3 class="wwd-subhead">This is just a placeholder.</h3>
-                            <p class="wwd-description">Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.</p>
+                            <h3 class="wwd-subhead">Partnerships and Free Distribution</h3>
+                            <p class="wwd-description">"We forge partnerships with
+                                organizations that share our mission of making 
+                                God's Word accessible to more souls."</p>
                         </div>
                     </li>
                     <li class="left">
                         <img class="wwd-img" src="https://picsum.photos/600/400?random=4" alt="ministry area illustration" width="300" height="200">    
                         <div class="text-block">
-                            <h3 class="wwd-subhead">This is just a placeholder.</h3>
-                            <p class="wwd-description">Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.</p>
+                            <h3 class="wwd-subhead">Outreach</h3>
+                            <p class="wwd-description">"Connecting with people and sharing God's tremendous
+                                love from the Bible is at the heart of our
+                                Outreach efforts.
+                                "</p>
                         </div>
                     </li>
                 </ul>
             </section>
-            <section class="section" id="support">
-                <img src="" alt="" height="100" width="100">
-                <h2 class="header" id="support-header">Support</h2>
-                <a class="support-cta" href="">final offer</a>
+            <hr>
+            <section class="section" id="how-to-support">
+                <img class="fit-img" src="https://picsum.photos/800/600/?blur=1&random=1" alt="how to support" width="800" height="600" >
+                <div id="hts-texts" class="">
+                    <h1 class="section-header" id="">HOW TO SUPPORT</h1>
+                    <p class="section-description">Let's do the Great Comission Together</p>
+                    <a id="hts-cta" class="button" href=""><i class="fi fi-rr-marker"></i> Donate</a>
+                </div>
+                <div id="hts-overlay" class="overlay"></div>
             </section>
         </main>
 
-        <footer></footer>
+        </footer>
+        
 
         <script src="" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -139,7 +153,7 @@
             margin: 1rem auto 2rem;
         }
 
-        .carousel-img {
+        .fit-img {
             width: 100vw;
             height: auto;
         }
@@ -212,6 +226,7 @@
 
         .wwd-subhead {
             font-weight: bold;
+            font-size: calc(0.9rem + .6vw);
         }
 
         .wwd-description {
@@ -220,6 +235,7 @@
         }
 
         .button {
+            display: inline-block;
             background-color: white;
             border-radius: 5px;
             width: 12rem;
@@ -260,6 +276,23 @@
         
         #cta-wrapper {
             top: calc(72% + 3rem);
+        }
+
+        #how-to-support {
+            position: relative;
+        }
+
+        #hts-texts {
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            width: 100vw;
+            z-index: 10;
+            color: #434443;
+        }
+
+        #hts-overlay {
+            background-image: linear-gradient(to top, #ffffff00 0%, #ffffff00 25%, #ffefe5 65%);
         }
     </style>
 </html>
