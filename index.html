@@ -11,19 +11,83 @@
         <meta name="description" content="Ministry Microsite">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <nav></nav>
-        </header>
-
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <header id="header-container">
+            <nav id="header-nav" class="sticky full-width">
+                <a href="" id="odb-logo"></a>
+                <a href="" id="support-button" type="button" class="btn btn-primary btn-shadow">
+                    <i class="fi fi-ss-hand-holding-heart"></i>Support</a>
+            </nav>
+
+        </header>
+
+        <style>
+            .sticky {
+                position: fixed;
+                top: 0px;
+                z-index: 10;
+            }
+
+            .full-width {
+                width: 100%;
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .btn-shadow {
+                border: unset;
+                box-shadow: 1px 1px 7px 0px #00000050;
+            }
+
+            .btn-primary {
+                background-color: #db4400;
+                border-color: unset;
+            }
+
+            #header-container {
+                height: 50px;
+            }
+
+            #header-nav {
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #e3e3e3;
+                height: 50px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            #odb-logo {
+                background-image: url(https://odb.org/wp-content/themes/odbm-base-ourdailybread/images/odb_logo.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 145px;
+            }
+
+            #support-button {
+                padding: 2px 20px;
+                border-radius: 15px;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+        </style>
 
         <main>
             <section class="section" id="hero">
@@ -45,15 +109,16 @@
                     <p class="section-description">One Story at a Time</p>
                 </div>
                 <div id="cta-wrapper" class="center-absolute center-flex">
-                    <a class="hero-cta button" href=""><i class="fi fi-rr-marker"></i> Who We Are</a>
-                    <a class="hero-cta button" href=""><i class="fi fi-rr-marker"></i> What We Do</a>
-                    <a class="hero-cta button" href=""><i class="fi fi-rr-marker"></i> Support Us</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Who We Are</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> What We Do</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Support Us</a>
                 </div> 
                 <div class="overlay"></div>
                 <div>
                     
                 </div>
             </section>
+
             <section class="section" id="who-we-are">
                 <img src="" alt="logo" height="100" width="100">
                 <h2 class="section-header" id="wwa-header">WHO WE ARE</h2>
@@ -93,27 +158,128 @@
                     </li>
                 </ul>
             </section>
+
             <hr>
+
             <section class="section" id="how-to-support">
                 <img class="fit-img" src="https://picsum.photos/800/600/?blur=1&random=1" alt="how to support" width="800" height="600" >
                 <div id="hts-texts" class="">
                     <h1 class="section-header" id="">HOW TO SUPPORT</h1>
                     <p class="section-description">Let's do the Great Comission Together</p>
-                    <a id="hts-cta" class="button" href=""><i class="fi fi-rr-marker"></i> Donate</a>
+                    <a id="hts-cta" class="button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Donate</a>
                 </div>
                 <div id="hts-overlay" class="overlay"></div>
             </section>
+
         </main>
 
+        <footer>
+            <a href="https://filipino-odb.org/" id="footer-logo"></a>
+            <ul id="footer-links">
+                <li><a href="https://goo.gl/maps/ECUFKNY4bW5JRG8H7">
+                    <i class="fi fi-ss-marker"></i>322-C P. Guevarra St., Brgy. Sta. Lucia <br>San Juan City 1500, Philippines</a>
+                </li>
+                <li><a href="mailto:philippines@odb.org"><i class="fi fi-ss-envelope">
+                    </i>philippines@odb.org</a>
+                </li>
+                <li><a href="https://ourdailybreadpilipinas.org/">
+                    <i class="fi fi-ss-shopping-cart"></i>ourdailybreadpilipinas.org</a>
+                </li>
+                <li><a href="https://filipino-odb.org/">
+                    <i class="fi fi-ss-globe"></i>filipino-odb.org</a>
+                </li>
+            </ul>
+            <div id="footer-socmed">
+                <p>Follow us:</p>
+                <ul>
+                    <li><a href="https://facebook.com/ourdailybreadpilipinas">
+                        <i class="fi fi-brands-facebook"></i>
+                    </a></li>
+                    <li><a href="https://instagram.com/ourdailybreadpilipinas">
+                        <i class="fi fi-brands-instagram"></i>
+                    </a></li>
+                    <li><a href="https://twitter.com/odbpilipinas">
+                        <i class="fi fi-brands-twitter"></i>
+                    </a></li>
+                </ul>
+            </div>
+
+            <ul id="footer-legal">
+                <li>© 2023 Pilipinas ODB</li>
+                <li><a href="https://filipino-odb.org/rights-and-permissions/">Rights and Permissions</a></li>
+                <li><a href="https://filipino-odb.org/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="https://filipino-odb.org/privacy-policy/">Privacy Policy</a></li>
+            </ul>
         </footer>
+
+        <style>
+            footer {
+                margin: 40px 10px 20px;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 1em;
+
+                align-items: center;
+            }
+
+            #footer-links a {
+                display: flex;
+                gap: 0.5rem;
+                margin-bottom: 6px;
+            }
+
+            #footer-logo {
+                display: inline-block;
+                background-image: url(https://filipino-odb.org/wp-content/themes/odbm-base-language-tl/images/odbm_logo.svg);
+                width: calc(100vw - 20px);
+                height: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            #footer-links {
+                text-align: left;
+                border-left: 1px solid #e3e3e3;
+                padding: 0px 15px;
+                font-size: 1rem;
+                max-width: 250px;
+
+                margin-left: 16px;
+
+                line-height: 1.25rem;
+            }
+
+            #footer-socmed ul {
+                display: flex;
+                gap: 10px;
+                padding: 0;
+                font-size: 2em;
+            }
+
+            #footer-socmed p {
+                margin: 5px;
+                font-size: 1rem;
+            }
+
+            #footer-socmed {
+                margin: 20px 0px;
+            }
+        </style>
         
 
         <script src="" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
     <style>
+        :root {
+            font-size: 12px;
+        }
+
         body {
-            font-family: "PT Sans",sans-serif;
+            font-family: 'PT Sans', sans-serif;
         }
 
         a {
@@ -133,11 +299,6 @@
             margin: 0;
         }
 
-        li {
-            display: flex;
-            position: relative;
-            margin: 15px 0px;
-        }  
         hr {
             border: 1px solid #fab432;
             width: 50%;
@@ -233,7 +394,6 @@
             width: 12rem;
             margin: 5px;
             padding: 7px 7px;
-            box-shadow: 1px 1px 1px 0px #00000057;
             font-size: 1rem;
             text-align: center;
         }
@@ -270,6 +430,12 @@
             top: calc(72% + 3rem);
         }
 
+        #what-we-do li {
+            display: flex;
+            position: relative;
+            margin: 15px 0px;
+        }
+
         #how-to-support {
             position: relative;
         }
@@ -279,7 +445,7 @@
             position: absolute;
             top: 20%;
             width: 100vw;
-            z-index: 10;
+            z-index: 3;
             color: #434443;
         }
 
