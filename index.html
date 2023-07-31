@@ -30,7 +30,6 @@
             </nav>
 
         </header>
-
         <style>
             .sticky {
                 position: fixed;
@@ -40,6 +39,7 @@
 
             .full-width {
                 width: 100%;
+                max-width: 1440px;
             }
 
             .btn {
@@ -50,7 +50,7 @@
 
             .btn-shadow {
                 border: unset;
-                box-shadow: 1px 1px 7px 0px #00000050;
+                box-shadow: 1px 1px 2px #00000030
             }
 
             .btn-primary {
@@ -94,13 +94,22 @@
                 <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=1" alt="rolling-image" width="800" height="1200" >
+                        <picture>
+                            <source media="(min-width:992px)" srcset="https://picsum.photos/1024/512/?&random=1">
+                            <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=1" alt="rolling-image" width="800" height="1200" >
+                        </picture>
                       </div>
                       <div class="carousel-item">
-                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=2" alt="rolling-image" width="800" height="1200" >
+                        <picture>
+                            <source media="(min-width:992px)" srcset="https://picsum.photos/1024/512/?&random=2">
+                            <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=2" alt="rolling-image" width="800" height="1200" >
+                        </picture>
                       </div>
                       <div class="carousel-item">
-                        <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=3" alt="rolling-image" width="800" height="1200" >
+                        <picture>
+                            <source media="(min-width:992px)" srcset="https://picsum.photos/1024/512/?&random=3">
+                            <img class="fit-img" src="https://picsum.photos/800/1200/?blur=3&random=3" alt="rolling-image" width="800" height="1200" >
+                        </picture>
                       </div>
                     </div>
                 </div>
@@ -109,9 +118,9 @@
                     <p class="section-description">One Story at a Time</p>
                 </div>
                 <div id="cta-wrapper" class="center-absolute center-flex">
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Who We Are</a>
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> What We Do</a>
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Support Us</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-users-alt"></i> Who We Are</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-handshake"></i> What We Do</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi-ss-hand-holding-heart"></i> Support Us</a>
                 </div> 
                 <div class="overlay"></div>
                 <div>
@@ -120,12 +129,13 @@
             </section>
 
             <section class="section" id="who-we-are">
-                <img src="" alt="logo" height="100" width="100">
+                <i class="fi fi-ss-users-alt section-icon"></i>
                 <h2 class="section-header" id="wwa-header">WHO WE ARE</h2>
                 <p class="section-description">very short text</p>
             </section>
             <section class="section" id="what-we-do">
                 <hr>
+                <i class="fi fi-ss-handshake section-icon"></i>
                 <h2 class="section-header" id="wwd-header">WHAT WE DO</h2>
                 <ul>
                     <li class="right">
@@ -164,7 +174,7 @@
             <section class="section" id="how-to-support">
                 <img class="fit-img" src="https://picsum.photos/800/600/?blur=1&random=1" alt="how to support" width="800" height="600" >
                 <div id="hts-texts" class="">
-                    <h1 class="section-header" id="">HOW TO SUPPORT</h1>
+                    <h2 class="section-header" id="hts-header">HOW TO SUPPORT</h1>
                     <p class="section-description">Let's do the Great Comission Together</p>
                     <a id="hts-cta" class="button btn-shadow" href=""><i class="fi fi-rr-marker"></i> Donate</a>
                 </div>
@@ -235,6 +245,7 @@
                 display: inline-block;
                 background-image: url(https://filipino-odb.org/wp-content/themes/odbm-base-language-tl/images/odbm_logo.svg);
                 width: calc(100vw - 20px);
+                max-width: 1420px;
                 height: 30px;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -279,7 +290,19 @@
         }
 
         body {
+            max-width: 1440px;
+            margin: auto;
             font-family: 'PT Sans', sans-serif;
+            color: #434443;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        h1, h2, .section-header {
+            font-size: calc(1.2rem + 4vw);
+            font-weight: bold;
         }
 
         a {
@@ -308,6 +331,7 @@
 
         .fit-img {
             width: 100vw;
+            max-width: 1440px;
             height: auto;
         }
 
@@ -326,6 +350,7 @@
             transform: translate(-50%, -50%);
             z-index: 2;
             width: 100vw;
+            max-width: 1440px;
         }
 
         .overlay {
@@ -337,10 +362,10 @@
             bottom: 0;
         }
 
-        .section-header {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-align: center;
+
+
+        .section-icon {
+            font-size: calc(3rem + 6vw);
         }
 
         .left {
@@ -391,10 +416,10 @@
             display: inline-block;
             background-color: white;
             border-radius: 5px;
-            width: 12rem;
+            width: calc(7rem + 23vw);
             margin: 5px;
-            padding: 7px 7px;
-            font-size: 1rem;
+            padding: 1.2vw 0px;
+            font-size: calc(0.8rem + 1.5vw);
             text-align: center;
         }
 
@@ -404,19 +429,26 @@
         }
     </style>
     <style>
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
         #hero {
             position: relative;
         }
 
         #masthead {
-            top: calc(70% - 4rem);
+            top: calc(65% - 4rem);
             padding: 7vw;
             text-align: center;
-            color: #434443;
         }
 
         #masthead .section-description {
-            font-size: .9rem;
+            font-size: calc(0.4rem + 4vw);
             letter-spacing: 4px;
             text-transform: uppercase;
         }
@@ -425,9 +457,21 @@
             margin-bottom: 7px;
             letter-spacing: 0px;
         }
+
+        #hero-header, #hts-header {
+            font-size: calc(0.8rem + 6.5vw);
+        }
         
         #cta-wrapper {
-            top: calc(72% + 3rem);
+            top: calc(81%);
+        }
+
+        #cta-wrapper i {
+            font-size: calc(1rem + 1.5vw);
+        }
+
+        #who-we-are, #what-we-do {
+            margin: 40px 0px 0px;
         }
 
         #what-we-do li {
@@ -445,12 +489,33 @@
             position: absolute;
             top: 20%;
             width: 100vw;
+            max-width: 1440px;
             z-index: 3;
-            color: #434443;
         }
 
         #hts-overlay {
             background-image: linear-gradient(to top, #ffffff00 0%, #ffffff00 25%, #ffefe5 65%);
+        }
+    </style>
+
+    <!-- Desktop -->
+    <style>
+        @media (min-width: 992px) {         
+            #header-nav {
+                height: 80px;
+                padding: 20px;
+            } 
+
+            #odb-logo {
+                width: 250px;
+            }
+
+            #support-button {
+                border-radius: 20px;
+                padding: 2px 40px;
+                font-size: 1.75rem;
+                gap: 7px;
+            }
         }
     </style>
 </html>
