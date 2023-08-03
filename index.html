@@ -50,7 +50,11 @@
 
             .btn-shadow {
                 border: unset;
-                box-shadow: 1px 1px 2px #00000030
+                box-shadow: 3px 3px 3px #00000033;
+            }
+
+            .txt-shadow{
+                /* text-shadow: 3px 3px 5px #44434344; */
             }
 
             .btn-primary {
@@ -76,12 +80,11 @@
                 background-image: url(https://odb.org/wp-content/themes/odbm-base-ourdailybread/images/odb_logo.svg);
                 background-repeat: no-repeat;
                 background-position: center;
-                width: 145px;
+                width: 170px;
             }
 
             #support-button {
                 padding: 2px 20px;
-                border-radius: 15px;
                 font-size: 1.2rem;
                 text-transform: uppercase;
                 letter-spacing: 1px;
@@ -113,14 +116,14 @@
                       </div>
                     </div>
                 </div>
-                <div id="masthead" class="center-absolute center-flex">
+                <div id="masthead" class="center-absolute center-flex txt-shadow">
                     <h1 class="section-header" id="hero-header">LEADING FILIPINOS <br>TO THE BIBLE</h1>
                     <p class="section-description">One Story at a Time</p>
                 </div>
                 <div id="cta-wrapper" class="center-absolute center-flex">
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-users-alt"></i> Who We Are</a>
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-handshake"></i> What We Do</a>
-                    <a class="hero-cta button btn-shadow" href=""><i class="fi-ss-hand-holding-heart"></i> Support Us</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-users-alt"></i>Who We Are</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi fi-ss-handshake"></i>What We Do</a>
+                    <a class="hero-cta button btn-shadow" href=""><i class="fi-ss-hand-holding-heart"></i>How to Support</a>
                 </div> 
                 <div class="overlay"></div>
                 <div>
@@ -128,12 +131,12 @@
                 </div>
             </section>
 
-            <section class="section" id="who-we-are">
+            <section class="section txt-shadow" id="who-we-are">
                 <i class="fi fi-ss-users-alt section-icon"></i>
                 <h2 class="section-header" id="wwa-header">WHO WE ARE</h2>
                 <p class="section-description">In each resource we provide, every story we share, and every connection we make — we desire to make the life-changing wisdom of the Bible understandable and accessible to all Filipinos.</p>
             </section>
-            <section class="section" id="what-we-do">
+            <section class="section txt-shadow" id="what-we-do">
                 <hr>
                 <i class="fi fi-ss-handshake section-icon"></i>
                 <h2 class="section-header" id="wwd-header">WHAT WE DO</h2>
@@ -141,12 +144,12 @@
                     <li class="right">
                         <img class="wwd-img" src="https://campaign.ourdailybread.org/ph/photo/ministry-microsite/what-we-do-section/600-x-400/1.jpg" alt="ministry area illustration" width="300" height="200" >
                         <div class="text-block">
-                            <h3 class="wwd-subhead">Keep resources affordable.</h3>
+                            <h3 class="wwd-subhead">Keep resources affordable to Filipinos.</h3>
                             <!-- <p class="wwd-description">With our desire to lead more Filipinos to the Bible, we make sure our resources are affordable and accessible to all.</p> -->
                         </div>
                     </li>
                     <li class="left">
-                        <img class="wwd-img" src="https://campaign.ourdailybread.org/ph/photo/ministry-microsite/what-we-do-section/600-x-400/2.jpg" alt="ministry area illustration" width="300" height="200">
+                        <img class="wwd-img" src="https://campaign.ourdailybread.org/ph/photo/ministry-microsite/what-we-do-section/600-x-400/3.jpg" alt="ministry area illustration" width="300" height="200">
                         <div class="text-block">
                             <h3 class="wwd-subhead">Go the extra mile to reach more souls.</h3>
                             <!-- <p class="wwd-description">By participating in a wide range of events, we are able to make our resource displays easily available.</p> -->
@@ -155,12 +158,12 @@
                     <li class="right">
                         <img class="wwd-img" src="https://campaign.ourdailybread.org/ph/photo/ministry-microsite/what-we-do-section/600-x-400/3.jpg" alt="ministry area illustration" width="300" height="200">
                         <div class="text-block">
-                            <h3 class="wwd-subhead">Build meaningful partnerships.</h3>
+                            <h3 class="wwd-subhead">Forge meaningful partnerships.</h3>
                             <!-- <p class="wwd-description">We forge partnerships with organizations that share our mission of making God's Word accessible to more souls.</p> -->
                         </div>
                     </li>
                     <li class="left">
-                        <img class="wwd-img" src="https://picsum.photos/600/400?random=4" alt="ministry area illustration" width="300" height="200">    
+                        <img class="wwd-img" src="https://campaign.ourdailybread.org/ph/photo/ministry-microsite/what-we-do-section/600-x-400/2.jpg" alt="ministry area illustration" width="300" height="200">    
                         <div class="text-block">
                             <h3 class="wwd-subhead">Pay it forward.</h3>
                             <!-- <p class="wwd-description">Connecting with people and sharing God's tremendous love from the Bible is at the heart of our Outreach efforts.</p> -->
@@ -171,7 +174,7 @@
 
             <hr>
 
-            <section class="section" id="how-to-support">
+            <section class="section txt-shadow" id="how-to-support">
                 <img class="fit-img" src="https://picsum.photos/800/600/?blur=1&random=1" alt="how to support" width="800" height="600" >
                 <div id="hts-texts" class="">
                     <h2 class="section-header" id="hts-header">HOW TO SUPPORT</h1>
@@ -268,12 +271,13 @@
                 display: flex;
                 gap: 10px;
                 padding: 0;
-                font-size: 2em;
+                font-size: calc(2em + 3vw);
             }
 
             #footer-socmed p {
                 margin: 5px;
-                font-size: 1rem;
+                font-size: 1.4rem;
+                font-weight: bold;
             }
 
             #footer-socmed {
@@ -304,6 +308,11 @@
         h1, h2, .section-header {
             font-size: calc(1.2rem + 4vw);
             font-weight: bold;
+        }
+
+        img {
+            border-top: solid 1px white;
+            border-bottom: solid 1px white;
         }
 
         a {
@@ -355,7 +364,7 @@
         }
 
         .overlay {
-            background-image: linear-gradient(#ffffff00 0%, #ffffff00 25%, #ffefe5 65%);
+            background-image: linear-gradient(#ffffff00 0%, #ffffff00 30%, #FFEFE4 50%);
             position: absolute;
             width: 100%;
             z-index: 1;
@@ -451,7 +460,7 @@
         }
 
         #masthead {
-            top: calc(65% - 4rem);
+            top: calc(67% - 4rem);
             padding: 7vw;
             text-align: center;
         }
@@ -472,7 +481,7 @@
         }
         
         #cta-wrapper {
-            top: calc(81%);
+            top: 82%;
         }
 
         #cta-wrapper i {
@@ -531,10 +540,22 @@
         #hts-overlay {
             background-image: linear-gradient(to top, #ffffff00 0%, #ffffff00 0%, #ffefe5 70%);
         }
+
+        #how-to-support .fi-ss-hand-holding-heart {
+            position: relative;
+            right: 18px;
+        }
     </style>
 
-    <!-- Desktop -->
+    <!-- Other Viewports -->
     <style>
+
+        @media (min-width: 375px) {  
+            #odb-logo{
+                background-image: url(https://filipino-odb.org/wp-content/themes/odbm-base-language-tl/images/odbm_logo.svg);
+                width: 220px;
+            }
+        }
         @media (min-width: 992px) {         
             #header-nav {
                 height: 80px;
@@ -555,7 +576,7 @@
             #hero-header {
                 font-size: 5rem;
                 color: white;
-                text-shadow: 1px 1px 7px #000000ba;
+                /* text-shadow: 1px 1px 7px #000000ba; */
             }
 
             #hero .overlay {
@@ -573,7 +594,7 @@
             #masthead .section-description {
                 color: white;
                 font-size: 3.5rem;
-                text-shadow: 1px 1px 7px #000000ba;
+                /* text-shadow: 1px 1px 7px #000000ba; */
                 font-weight: bold;
             }
 
