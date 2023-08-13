@@ -44,12 +44,13 @@ ul {
 
 hr {
     border: 1px solid #fab432;
-    width: 50%;
+    width: 40vw;
     opacity: 1;
     margin: 3rem auto 5rem;
 }
 
 .fit-img {
+    object-fit: cover;
     width: 100vw;
     max-width: 1440px;
     height: auto;
@@ -71,6 +72,10 @@ hr {
     z-index: 2;
     width: 100vw;
     max-width: 1440px;
+}
+
+.carousel {
+    top: -1px;
 }
 
 .overlay {
@@ -278,13 +283,13 @@ hr {
 
 #who-we-are {
     display: flex;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     font-size: calc(1rem + 1vw);
     flex-direction: column;
     gap: 5px;
 }
 
-#who-we-are, #what-we-do {
+#who-we-are {
     margin: 40px 0px 0px;
 }
 
@@ -327,7 +332,7 @@ hr {
 }
 
 #hts-overlay {
-    background-image: linear-gradient(to top, #ffffff00 0%, #ffffff00 0%, #ffefe5 70%);
+    background-image: linear-gradient(to top, #ffffff00 0%, #ffffff00 0%, #ffefe5 70%, #ffd9be 100%);
 }
 
 #how-to-support .fi-ss-hand-holding-heart {
@@ -337,7 +342,7 @@ hr {
 
 /* Footer */
 
-footer {
+#footer-wrap {
     margin: 40px 10px 20px;
     text-align: center;
 
@@ -389,7 +394,7 @@ footer {
     display: flex;
     gap: 10px;
     padding: 0;
-    font-size: calc(2em + 3vw);
+    font-size: calc(2em + 1vw);
 }
 
 #footer-socmed p {
@@ -437,7 +442,7 @@ footer {
     
     /* Temporary */
 
-    #what-we-do li {
+    /* #what-we-do li {
         position: unset !important;
         margin: unset !important;
     }
@@ -471,15 +476,38 @@ footer {
     
     .left {
         flex-direction: unset !important;
-    }
+    } */
 
     /* End of Temporary */
 
+    body {
+        max-width: unset;
+    }
+
+    #header-container {
+        height: 80px;
+        background-color: white;
+        box-shadow: 0px 1px 0px #ddd;
+    }
+
     #header-nav {
+        position: initial;
         height: 80px;
         padding: 16px 20px;
-        box-shadow: 0px 1px 0px #ddd;
+        /* box-shadow: 0px 1px 0px #ddd; */
+        border-bottom: unset;
+        max-width: 1440px;
+        margin: auto;
     } 
+
+    #header-container {
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 10;
+
+    }
 
     #nav-wrap {
         display: flex;
@@ -510,6 +538,11 @@ footer {
         width: 300px;
     }
 
+    #hero {
+        max-width: 1440px;
+        margin: 80px auto;
+    }
+
     #hero-header {
         font-size: calc(4rem + 1vw);
         color: white;
@@ -519,7 +552,7 @@ footer {
         background-image: linear-gradient(#43434343 0%, #43434343 50%, #1c1c1c 100%);
     }
 
-    .hero-cta {
+    .hero-cta, .hts-cta {
         background-color: transparent;
         border: solid 1px white;
         color: white;
@@ -545,7 +578,7 @@ footer {
     }
 
     .button {
-        padding: 7px 0;
+        padding: 10px 0;
         font-size: calc(1.2rem + 60%);
         width: 250px;
         position: relative;
@@ -577,10 +610,15 @@ footer {
         top: -22px;
     }
 
+    #who-we-are, #what-we-do {
+        max-width: 1440px;
+        margin: auto;
+    }
+
     #who-we-are {
         display: flex;
         flex-direction: column;
-        padding: 60px 30px;
+        padding: 100px 30px 60px;
         column-gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
@@ -600,9 +638,35 @@ footer {
         line-height: 14rem;
     }
 
+    .wwd-img {
+        width: 60%;
+    }
+
+    .text-block {
+        padding: calc(5px + 5%);
+    }
+
+    .right .text-block {
+        background-image: linear-gradient(to right, #ffffff00 0%, #ffffff00 30%, #ffefe5 600px, #fbe5d4 100%);
+        padding-left: 60%;
+    }
+
+    .left .text-block {
+        background-image: linear-gradient(to left, #ffffff00 0%, #ffffff00 30%, #ffefe5 600px, #fbe5d4 100%);
+        padding-right: 60%;
+    }
+
+    #what-we-do {
+        margin-bottom: 50px;
+    }
+    
+    .wwd-subhead {
+        font-size: calc(2.5rem + 1vw);
+    }
+
     /* What We Do */
 
-    #what-we-do ul {
+    /* #what-we-do ul {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -649,10 +713,17 @@ footer {
         padding: 30px 30px !important;
         position: relative !important;
         left: -50px !important;  
-    }
+    } */
+
+    /* How to Support */
 
     #how-to-support {
-       margin-top: 150px;
+        max-width: 1440px;
+        margin: 0px auto 75px;
+    }
+
+    #how-to-support img {
+        height: 500px;
     }
 
     #hts-header {
@@ -666,7 +737,7 @@ footer {
     }
 
     .hts-cta {
-        margin: 10px !important;
+        margin: 0px 10px 10px !important;
     }
     
     #hts-overlay {
@@ -684,15 +755,22 @@ footer {
     /* Footer */
 
     footer {
+        background-color: #87878710;
+        border-bottom: solid 40px gray;
+    }
+
+    #footer-wrap {
+        max-width: 1440px;
+        margin: auto;
+
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         column-gap: 30px;
-        margin: 100px 0px 0px;
-        background-color: #87878710;
         padding: 40px 0px 0px;
         row-gap: 40px;
+        
     }
     
     #footer-logo {
@@ -718,7 +796,7 @@ footer {
 
     
     #footer-socmed ul {
-        font-size: 4em;
+        font-size: 3em;
         gap: 20px;
     }
     
@@ -730,18 +808,30 @@ footer {
     }
         
     #footer-legal {
+        position: relative;
+        top: 40px;
+
         display: inline-flex;
-        background-color: #434443;
         color: white;
         width: 100vw;
         gap: 20px;
         justify-content: center;
-        border: solid 1px #434443;
         padding: 10px 5px;
     }
     
     #footer-legal a {
         color: white;
+    }
+
+    /* Hover */
+
+    #cta-wwa:hover, #cta-wwd:hover, #hts-pray:hover {
+        background-color: white;
+        color: #434343;
+    }
+
+    #cta-hts:hover, #support-button:hover, #hts-cta:hover {
+        background-color: #bb3a00;
     }
 
 }
